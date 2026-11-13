@@ -1,0 +1,150 @@
+/* RC Manager – admin styles */
+
+.rcman .rcman-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 16px;
+    margin: 16px 0;
+}
+
+.rcman .rcman-card,
+.rcman .rcman-panel {
+    background: #fff;
+    border: 1px solid #c3c4c7;
+    border-radius: 4px;
+    padding: 16px;
+}
+
+.rcman .rcman-panel {
+    margin: 16px 0;
+}
+
+.rcman .rcman-panel h2 {
+    margin-top: 0;
+}
+
+.rcman .rcman-card__value {
+    display: block;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 1.2;
+    color: #1d2327;
+}
+
+.rcman .rcman-card__label {
+    color: #646970;
+}
+
+.rcman .rcman-columns {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 16px;
+}
+
+.rcman .rcman-columns .rcman-panel {
+    margin: 0;
+}
+
+@media (max-width: 960px) {
+    .rcman .rcman-columns {
+        grid-template-columns: 1fr;
+    }
+}
+
+.rcman .rcman-ranking {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.rcman .rcman-ranking li {
+    display: flex;
+    justify-content: space-between;
+    padding: 4px 0;
+    border-bottom: 1px solid #f0f0f1;
+}
+
+.rcman .rcman-year-filter {
+    margin: 12px 0;
+}
+
+.rcman .rcman-inline-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: flex-end;
+}
+
+.rcman .rcman-inline-form label {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.rcman .rcman-check {
+    display: block;
+    margin-bottom: 6px;
+}
+
+.rcman .rcman-actions {
+    text-align: right;
+    white-space: nowrap;
+}
+
+.rcman .rcman-badge {
+    display: inline-block;
+    padding: 0 6px;
+    margin-left: 6px;
+    border-radius: 3px;
+    background: #f0f0f1;
+    font-size: 11px;
+    font-weight: normal;
+    color: #50575e;
+}
+
+.rcman .rcman-heading-form {
+    display: inline;
+}
+
+.rcman .rcman-charts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+    gap: 16px;
+}
+
+.rcman .rcman-charts .rcman-panel {
+    margin: 0;
+}
+
+.rcman .rcman-chart__canvas {
+    position: relative;
+    height: 300px;
+}
+
+@media (max-width: 600px) {
+    .rcman .rcman-charts {
+        grid-template-columns: 1fr;
+    }
+}
+
+.rcman .rcman-logs code {
+    white-space: pre-wrap;
+    word-break: break-all;
+    font-size: 11px;
+}
+
+.rcman .rcman-level {
+    display: inline-block;
+    padding: 0 6px;
+    border-radius: 3px;
+    background: #f0f0f1;
+}
+
+.rcman .rcman-level--warning {
+    background: #fcf9e8;
+    color: #996800;
+}
+
+.rcman .rcman-level--error {
+    background: #fcf0f1;
+    color: #b32d2e;
+}

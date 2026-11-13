@@ -35,11 +35,18 @@ wp-config.php
 # htaccess
 /.htaccess
 
-# All plugins
-#
-# Note: If you wish to whitelist plugins,
-# uncomment the next line
-#/wp-content/plugins
+# All plugins except our own (RC Manager)
+/wp-content/plugins/*
+!/wp-content/plugins/rcman/
+
+# Composer dependencies of the plugin (install with `composer install`)
+/wp-content/plugins/rcman/vendor/
+
+# WordPress runtime folders
+/wp-content/upgrade/
+/wp-content/upgrade-temp-backup/
+/wp-content/cache/
+/wp-content/debug.log
 
 # All themes
 #
