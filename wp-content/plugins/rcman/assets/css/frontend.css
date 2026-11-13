@@ -1,0 +1,127 @@
+/* RC Manager – public forms. Uses the theme's fonts; colours can be overridden via the custom properties. */
+
+.rcman-form-wrapper {
+    --rcman-accent: #874da2;
+    --rcman-accent-2: #c43a30;
+    --rcman-border: #d0d0d5;
+    --rcman-radius: 8px;
+    max-width: 640px;
+    margin: 0 auto;
+}
+
+.rcman-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 24px;
+    border: 1px solid var(--rcman-border);
+    border-radius: var(--rcman-radius);
+}
+
+.rcman-form__title {
+    margin: 0;
+    text-align: center;
+}
+
+.rcman-form__image {
+    width: 100%;
+    height: auto;
+    border-radius: var(--rcman-radius);
+}
+
+.rcman-field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin: 0;
+    border: 0;
+    padding: 0;
+    min-width: 0;
+}
+
+.rcman-field label,
+.rcman-field legend {
+    font-weight: 600;
+}
+
+.rcman-field input[type="text"],
+.rcman-field input[type="email"],
+.rcman-field input[type="tel"],
+.rcman-field input[type="date"],
+.rcman-field input[type="time"],
+.rcman-field select {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 12px;
+    border: 1px solid var(--rcman-border);
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+.rcman-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+@media (max-width: 520px) {
+    .rcman-row {
+        grid-template-columns: 1fr;
+    }
+}
+
+.rcman-check {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: normal !important;
+}
+
+.rcman-help {
+    opacity: 0.75;
+}
+
+.rcman-button {
+    align-self: flex-start;
+    padding: 10px 18px;
+    border: 0;
+    border-radius: 6px;
+    background-image: linear-gradient(45deg, var(--rcman-accent) 0%, var(--rcman-accent-2) 100%);
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.rcman-button--small {
+    padding: 6px 12px;
+    font-size: 14px;
+}
+
+.rcman-button:focus-visible {
+    outline: 2px solid var(--rcman-accent);
+    outline-offset: 2px;
+}
+
+.rcman-alert {
+    padding: 12px 16px;
+    border-radius: 6px;
+}
+
+.rcman-alert--success {
+    background: #edfaef;
+    color: #135e25;
+}
+
+.rcman-alert--error {
+    background: #fcf0f1;
+    color: #8a1f1f;
+}
+
+/* Honeypot field, hidden from humans. */
+.rcman-hp {
+    position: absolute !important;
+    left: -9999px !important;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
